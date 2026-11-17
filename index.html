@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wallbinet | Where Space Meets Style</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <span>Locally-Made in Sta. Ana, Pampanga • Crafted from Durable Marine Plywood</span>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">
+        <img src="assets/images/logo.jpg" alt="Wallbinet Logo" class="nav-logo" />
+        <div class="brand-text">
+          <span class="brand-name">WALLBINET</span>
+          <span class="brand-sub">Smart Wall Systems</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#product">Shop Wallbinet</a>
+        <a href="#features">Features</a>
+        <a href="#track-order">Track Order</a>
+        <a href="#faq-policies">Policies &amp; FAQ</a>
+        <a href="#contact">Location &amp; Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-trigger" id="openCartBtn" aria-label="Open Shopping Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span>Cart</span>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero & Single Product Configurator -->
+  <main id="top">
+    <section class="hero-section" id="product">
+      <div class="container product-grid">
+        <!-- Product Gallery -->
+        <div class="gallery-col">
+          <div class="main-image-frame">
+            <img id="mainProductImg" src="assets/images/lifestyle-open.jpg" alt="Wallbinet Wall-Mounted Foldable Study & Work Cabinet Table" />
+            <span class="badge-tag">Est. 2026 • Marine Plywood</span>
+          </div>
+          <div class="thumbnail-row">
+            <button class="thumb-btn active" data-img="assets/images/lifestyle-open.jpg">
+              <img src="assets/images/lifestyle-open.jpg" alt="Open Study Setup" />
+            </button>
+            <button class="thumb-btn" data-img="assets/images/cabinet-angle.jpg">
+              <img src="assets/images/cabinet-angle.jpg" alt="Interior Storage Shelves" />
+            </button>
+            <button class="thumb-btn" data-img="assets/images/sizes-colors.jpg">
+              <img src="assets/images/sizes-colors.jpg" alt="Size and Color Chart" />
+            </button>
+            <button class="thumb-btn" data-img="assets/images/promo-flyer.jpg">
+              <img src="assets/images/promo-flyer.jpg" alt="Closed and Open Views" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Configuration & Add to Cart -->
+        <div class="config-col">
+          <p class="tagline-pill">“Where Space Meets Style” • “Smart Storage. Smart Living.”</p>
+          <h1 class="product-title">Wallbinet – Locally‑Made Wall‑Mounted Foldable Study &amp; Work Cabinet Table</h1>
+          <div class="price-display" id="selectedPriceDisplay">₱6,499</div>
+
+          <p class="product-desc">
+            A locally‑made, space‑saving wall‑mounted cabinet with a foldable study and work table crafted from durable marine plywood. Features spacious built-in storage shelves and a clean modern aesthetic—perfect for dorms, apartments, and small homes. Keep it closed for a neat, flush wall profile and fold it down anytime as your dedicated work/study station.
+          </p>
+
+          <!-- Step 1: Size Selector -->
+          <div class="option-group">
+            <label class="option-label">1. Select Size Dimensions:</label>
+            <div class="size-cards" id="sizeSelector">
+              <button type="button" class="size-card active" data-size="Small (60 cm × 40 cm)" data-price="6499">
+                <strong>Small</strong>
+                <span>60 × 40 cm</span>
+                <em>₱6,499</em>
+              </button>
+              <button type="button" class="size-card" data-size="Medium (70 cm × 45 cm)" data-price="8199">
+                <strong>Medium</strong>
+                <span>70 × 45 cm</span>
+                <em>₱8,199</em>
+              </button>
+              <button type="button" class="size-card" data-size="Large (80 cm × 50 cm)" data-price="10000">
+                <strong>Large</strong>
+                <span>80 × 50 cm</span>
+                <em>₱10,000</em>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Color / Finish Selector -->
+          <div class="option-group">
+            <label class="option-label">2. Select Finish / Color: <span id="selectedColorName">White</span></label>
+            <div class="color-swatches" id="colorSelector">
+              <button type="button" class="swatch-btn active" data-color="White">
+                <span class="swatch-circle" style="background:#FFFFFF; border:1px solid #ccc;"></span>
+                <span>White</span>
+              </button>
+              <button type="button" class="swatch-btn" data-color="Brown">
+                <span class="swatch-circle" style="background:#4A3525;"></span>
+                <span>Brown</span>
+              </button>
+              <button type="button" class="swatch-btn" data-color="Black">
+                <span class="swatch-circle" style="background:#1F2120;"></span>
+                <span>Black</span>
+              </button>
+              <button type="button" class="swatch-btn" data-color="Wood Grain">
+                <span class="swatch-circle" style="background:linear-gradient(135deg,#C89D6C,#9E6F40);"></span>
+                <span>Wood Grain</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3: Quantity & Actions -->
+          <div class="purchase-row">
+            <div class="qty-box">
+              <button type="button" id="qtyMinus" aria-label="Decrease quantity">−</button>
+              <input type="number" id="productQty" value="1" min="1" max="20" readonly />
+              <button type="button" id="qtyPlus" aria-label="Increase quantity">+</button>
+            </div>
+            <button type="button" class="btn-primary add-cart-btn" id="addToCartBtn">
+              Add to Cart — <span id="btnSubtotal">₱6,499</span>
+            </button>
+          </div>
+
+          <div class="trust-badges">
+            <div>✓ Heavy-Duty Wall Mounting Hardware Included</div>
+            <div>✓ Moisture-Resistant Marine Plywood Build</div>
+            <div>✓ Secure GCash, Maya, PayPal, Card &amp; COD</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-head">
+          <h2>Maximize Your Space — Mount It On Your Wall</h2>
+          <p>Engineered for compact living spaces without sacrificing durability or organization.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3>Durable Marine Plywood</h3>
+            <p>Built from high-grade marine plywood that resists warping, moisture, and daily study or laptop workloads.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Fold-Down Work Table</h3>
+            <p>Reinforced metal stay arms support your laptop, books, and accessories, folding neatly flush when not in use.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Multi-Tier Built-In Shelves</h3>
+            <p>Dedicated compartments keep notebooks, stationery, clocks, and organizers accessible and clutter-free.</p>
+          </div>
+          <div class="feature-card">
+            <h3>4 Architectural Finishes</h3>
+            <p>Available in clean White, rich Brown, matte Black, and natural Wood Grain to match any room interior.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Tracking Section -->
+    <section class="tracking-section" id="track-order">
+      <div class="container">
+        <div class="tracking-card">
+          <div class="section-head">
+            <h2>Track Your Wallbinet Delivery</h2>
+            <p>Enter your Order Reference Number (e.g., <strong>WB-2026-1001</strong>) or use the direct tracking link from your receipt.</p>
+          </div>
+
+          <form id="trackingForm" class="tracking-form">
+            <input type="text" id="trackingInput" placeholder="Enter Order ID (e.g., WB-2026-XXXX)" required />
+            <button type="submit" class="btn-primary">Track Order</button>
+          </form>
+
+          <p class="link-guide-note">
+            Direct Tracking Link Format: <code>index.html?track=YOUR_ORDER_ID#track-order</code>
+          </p>
+
+          <div id="trackingResult" class="tracking-result hidden"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ & Policies Section -->
+    <section class="policies-section" id="faq-policies">
+      <div class="container">
+        <div class="section-head">
+          <h2>Customer Care, FAQ &amp; Store Policies</h2>
+          <p>Everything you need to know about ordering, delivery, warranty, and wholesale partnerships.</p>
+        </div>
+
+        <div class="policy-tabs">
+          <button class="tab-btn active" data-tab="customer-care">Customer Care &amp; FAQ</button>
+          <button class="tab-btn" data-tab="shipping-policy">Shipping &amp; Delivery Policy</button>
+          <button class="tab-btn" data-tab="return-policy">Return &amp; Exchange Policy</button>
+          <button class="tab-btn" data-tab="privacy-policy">Privacy &amp; Safety</button>
+          <button class="tab-btn" data-tab="wholesale">Wholesale Inquiries</button>
+        </div>
+
+        <div class="tab-content-box">
+          <!-- Tab 1: Customer Care -->
+          <div class="tab-pane active" id="customer-care">
+            <h3>Customer Care &amp; Frequently Asked Questions</h3>
+            <div class="faq-item">
+              <h4>Is mounting hardware included with every Wallbinet?</h4>
+              <p>Yes. Every unit ships with heavy-duty wall anchors, screws, and an installation guide suitable for concrete and solid stud walls.</p>
+            </div>
+            <div class="faq-item">
+              <h4>How much weight can the fold-down desk support?</h4>
+              <p>Our marine plywood desk surface and dual steel folding supports safely hold up to 25 kg—ideal for laptops, monitors, textbooks, and study lamps.</p>
+            </div>
+            <div class="faq-item">
+              <h4>Need direct assistance?</h4>
+              <p>Call or message our Sta. Ana, Pampanga team at <strong>0968-409-6482</strong> or email <strong>wallbinetcorp@gmail.com</strong> (Mon–Sat, 8:00 AM – 6:00 PM).</p>
+            </div>
+          </div>
+
+          <!-- Tab 2: Shipping & Delivery Policy -->
+          <div class="tab-pane" id="shipping-policy">
+            <h3>Shipping &amp; Delivery Policy</h3>
+            <ul>
+              <li><strong>Fabrication &amp; Dispatch:</strong> Each Wallbinet is inspected at our Sta. Ana, Pampanga workshop and dispatched within 2–4 business days.</li>
+              <li><strong>Estimated Delivery Windows:</strong> Pampanga &amp; Central Luzon (1–3 days), Metro Manila (2–4 days), Rest of Luzon (3–6 days), Visayas &amp; Mindanao (5–10 days).</li>
+              <li><strong>Real-Time Order Tracking:</strong> Once dispatched, your Order ID updates live with hub checkpoints and courier transit status.</li>
+              <li><strong>Protective Packaging:</strong> Units are corner-padded, bubble-wrapped, and boxed to prevent transit scratches or dents.</li>
+            </ul>
+          </div>
+
+          <!-- Tab 3: Return & Exchange Policy -->
+          <div class="tab-pane" id="return-policy">
+            <h3>Return &amp; Exchange Policy</h3>
+            <ul>
+              <li><strong>7-Day Replacement Guarantee:</strong> If your Wallbinet arrives with manufacturing defects, missing hardware, or transit damage, report it within 7 days of receipt for a free replacement or repair.</li>
+              <li><strong>Condition Requirements:</strong> Returned units must be unused, unmounted, and in original packaging with all accessories included.</li>
+              <li><strong>Size &amp; Color Exchanges:</strong> Size or color changes may be requested prior to workshop dispatch. Post-delivery exchanges for non-defective items are subject to return shipping fees.</li>
+              <li><strong>How to File a Claim:</strong> Send your Order ID and unboxing photos/video to <strong>wallbinetcorp@gmail.com</strong> or <strong>0968-409-6482</strong>.</li>
+            </ul>
+          </div>
+
+          <!-- Tab 4: Privacy & Safety -->
+          <div class="tab-pane" id="privacy-policy">
+            <h3>Privacy &amp; Safety Policy</h3>
+            <ul>
+              <li><strong>Data Protection:</strong> Customer names, email addresses, contact numbers, and delivery addresses are collected solely for order fulfillment, email verification, and delivery updates.</li>
+              <li><strong>Payment Security:</strong> All digital payments (GCash, Maya, PayPal, Credit/Debit Card) and COD transactions require email verification before order confirmation. We never sell or share customer data with third-party marketers.</li>
+              <li><strong>Product Safety:</strong> All edges are smoothly sanded and sealed. Ensure the cabinet is mounted securely into a load-bearing concrete or wood-stud wall following the included guide.</li>
+            </ul>
+          </div>
+
+          <!-- Tab 5: Wholesale Inquiries -->
+          <div class="tab-pane" id="wholesale">
+            <h3>Wholesale &amp; Bulk Inquiries</h3>
+            <p>Outfitting a dormitory, student housing, review center, or co-working space? Enjoy tiered bulk discounts starting at <strong>5+ units</strong>.</p>
+            <form id="wholesaleForm" class="wholesale-form">
+              <div class="form-row">
+                <input type="text" id="wsName" placeholder="Your Name / Organization" required />
+                <input type="email" id="wsEmail" placeholder="Business Email" required />
+              </div>
+              <div class="form-row">
+                <input type="tel" id="wsPhone" placeholder="Contact Number" required />
+                <input type="number" id="wsQty" placeholder="Estimated Quantity (Min. 5)" min="5" required />
+              </div>
+              <textarea id="wsNotes" rows="3" placeholder="Preferred sizes, colors, and delivery city..." required></textarea>
+              <button type="submit" class="btn-primary">Submit Wholesale Inquiry</button>
+              <p id="wsFeedback" class="form-feedback"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location & Contact Section with Google Map -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-details">
+          <h2>Visit or Connect With Wallbinet</h2>
+          <p>Proudly crafted in Pampanga and delivered nationwide.</p>
+
+          <ul class="contact-list">
+            <li><strong>Workshop &amp; Business Location:</strong> Sta. Ana, Pampanga, Philippines</li>
+            <li><strong>Contact Number:</strong> <a href="tel:09684096482">0968-409-6482</a></li>
+            <li><strong>Email Address:</strong> <a href="mailto:wallbinetcorp@gmail.com">wallbinetcorp@gmail.com</a></li>
+          </ul>
+
+          <div class="social-links">
+            <a href="https://www.facebook.com/share/1CJ2Shus1K/" target="_blank" rel="noopener noreferrer" class="social-btn">Facebook Page</a>
+            <a href="https://vt.tiktok.com/ZSpahbEbB/" target="_blank" rel="noopener noreferrer" class="social-btn">TikTok</a>
+            <a href="https://www.instagram.com/wallbinet?cplk=MXUzZmxjb3pmbnV0cA==" target="_blank" rel="noopener noreferrer" class="social-btn">Instagram</a>
+          </div>
+        </div>
+
+        <div class="map-wrapper">
+          <iframe
+            title="Wallbinet Location - Sta. Ana, Pampanga"
+            src="https://www.google.com/maps?q=Sta.+Ana,+Pampanga,+Philippines&output=embed"
+            width="100%"
+            height="340"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>WALLBINET</strong> — “Where Space Meets Style” | “Smart Storage. Smart Living.”
+        <p>Sta. Ana, Pampanga • 0968-409-6482 • wallbinetcorp@gmail.com</p>
+      </div>
+      <div class="footer-links">
+        <a href="#faq-policies">Shipping Policy</a>
+        <a href="#faq-policies">Return &amp; Exchange</a>
+        <a href="#faq-policies">Privacy &amp; Safety</a>
+        <a href="#track-order">Track Delivery</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Over Cart Drawer (With Edit & Delete Support) -->
+  <div class="drawer-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
+    <div class="drawer-header">
+      <h2>Your Cart</h2>
+      <button type="button" class="close-btn" id="closeCartBtn">✕</button>
+    </div>
+
+    <div class="drawer-body" id="cartItemsContainer">
+      <!-- Dynamically populated by store.js -->
+    </div>
+
+    <div class="drawer-footer">
+      <div class="cart-total-row">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">₱0</strong>
+      </div>
+      <button type="button" class="btn-primary full-width" id="proceedCheckoutBtn" disabled>
+        Proceed to Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- Checkout & Email Verification Modal -->
+  <div class="modal-backdrop" id="checkoutModal">
+    <div class="modal-card checkout-card">
+      <div class="modal-header">
+        <h2>Complete Your Wallbinet Order</h2>
+        <button type="button" class="close-btn" id="closeCheckoutBtn">✕</button>
+      </div>
+
+      <form id="checkoutForm" class="checkout-form">
+        <!-- Customer & Shipping Details -->
+        <div class="checkout-section">
+          <h3>1. Delivery &amp; Contact Information</h3>
+          <div class="form-row">
+            <input type="text" id="custName" placeholder="Full Name" required />
+            <input type="tel" id="custPhone" placeholder="Mobile Number (e.g., 09XX-XXX-XXXX)" required />
+          </div>
+          <input type="email" id="custEmail" placeholder="Registered Email Address (for verification code)" required />
+          <textarea id="custAddress" rows="2" placeholder="Complete Delivery Address (House/Unit No., Street, Barangay, City, Province)" required></textarea>
+        </div>
+
+        <!-- Payment Method Selection -->
+        <div class="checkout-section">
+          <h3>2. Select Payment Method</h3>
+          <div class="payment-grid" id="paymentMethods">
+            <label class="pay-option active">
+              <input type="radio" name="paymentMethod" value="GCash" checked />
+              <span>GCash</span>
+            </label>
+            <label class="pay-option">
+              <input type="radio" name="paymentMethod" value="Maya" />
+              <span>Maya</span>
+            </label>
+            <label class="pay-option">
+              <input type="radio" name="paymentMethod" value="PayPal" />
+              <span>PayPal</span>
+            </label>
+            <label class="pay-option">
+              <input type="radio" name="paymentMethod" value="Credit Card" />
+              <span>Credit Card</span>
+            </label>
+            <label class="pay-option">
+              <input type="radio" name="paymentMethod" value="Debit Card" />
+              <span>Debit Card</span>
+            </label>
+            <label class="pay-option">
+              <input type="radio" name="paymentMethod" value="Cash on Delivery (COD)" />
+              <span>Cash on Delivery (COD)</span>
+            </label>
+          </div>
+          <div id="paymentDynamicFields" class="payment-extra-fields">
+            <input type="text" id="payAccountRef" placeholder="GCash Mobile Number (09XX-XXX-XXXX)" required />
+          </div>
+        </div>
+
+        <!-- Mandatory Four Policy Checkboxes -->
+        <div class="checkout-section">
+          <h3>3. Policy Agreements &amp; Purchase Contract (Required)</h3>
+          <div class="checkbox-stack">
+            <label class="check-label">
+              <input type="checkbox" id="chkShipping" required />
+              <span>I have read and agree to the <button type="button" class="inline-policy-link" data-policy="shipping">Shipping Policy</button>.</span>
+            </label>
+            <label class="check-label">
+              <input type="checkbox" id="chkReturn" required />
+              <span>I have read and agree to the <button type="button" class="inline-policy-link" data-policy="return">Return and Exchange Policy</button>.</span>
+            </label>
+            <label class="check-label">
+              <input type="checkbox" id="chkPrivacy" required />
+              <span>I have read and agree to the <button type="button" class="inline-policy-link" data-policy="privacy">Privacy and Safety Policy</button>.</span>
+            </label>
+            <label class="check-label">
+              <input type="checkbox" id="chkContract" required />
+              <span>I agree to the <button type="button" class="inline-policy-link" data-policy="contract">Wallbinet Purchase &amp; Installation Contract</button>.</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Email Verification Step -->
+        <div class="checkout-section verification-box">
+          <h3>4. Email Verification Before Payment</h3>
+          <p class="verify-hint">Click below to send a 6-digit verification code to your registered email address.</p>
+          <div class="verify-row">
+            <button type="button" class="btn-secondary" id="sendCodeBtn">Send Verification Code</button>
+            <input type="text" id="emailCodeInput" maxlength="6" placeholder="Enter 6-digit code" disabled />
+            <button type="button" class="btn-secondary" id="verifyCodeBtn" disabled>Verify</button>
+          </div>
+          <div id="verificationStatus" class="verify-status"></div>
+        </div>
+
+        <div class="checkout-summary-bar">
+          <div>
+            <span>Total Payable:</span>
+            <strong id="checkoutTotalAmount">₱0</strong>
+          </div>
+          <button type="submit" class="btn-primary" id="confirmPaymentBtn" disabled>
+            Confirm &amp; Complete Payment
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Policy Quick-Read Modal -->
+  <div class="modal-backdrop" id="policyReadModal">
+    <div class="modal-card small-modal">
+      <div class="modal-header">
+        <h3 id="policyModalTitle">Policy Details</h3>
+        <button type="button" class="close-btn" id="closePolicyModalBtn">✕</button>
+      </div>
+      <div id="policyModalBody" class="policy-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Email Verification Inbox Notification Toast/Modal -->
+  <div class="email-toast hidden" id="emailInboxToast">
+    <div class="email-toast-head">
+      <strong>New Email • Wallbinet Verification</strong>
+      <button type="button" id="closeToastBtn">✕</button>
+    </div>
+    <p id="emailToastRecipient"></p>
+    <p>Your Wallbinet payment verification code is: <span class="otp-code" id="emailToastCode"></span></p>
+  </div>
+
+  <!-- Purchase Success Modal -->
+  <div class="modal-backdrop" id="successModal">
+    <div class="modal-card success-card">
+      <div class="success-icon">✓</div>
+      <h2>Purchase Successful!</h2>
+      <p>Thank you for ordering from <strong>Wallbinet</strong>. Your order has been confirmed and queued at our Sta. Ana, Pampanga workshop.</p>
+      <div class="receipt-box" id="receiptDetails"></div>
+      <div class="success-actions">
+        <a href="#track-order" class="btn-primary" id="trackNewOrderBtn">Track My Order Now</a>
+        <button type="button" class="btn-secondary" id="closeSuccessBtn">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/store.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/tracking.js"></script>
+</body>
+</html>

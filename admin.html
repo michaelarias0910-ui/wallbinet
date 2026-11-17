@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wallbinet Admin Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="admin-body">
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/images/logo.jpg" alt="Wallbinet Logo" class="nav-logo" />
+        <div class="brand-text">
+          <span class="brand-name">WALLBINET ADMIN</span>
+          <span class="brand-sub">Order &amp; Delivery Management</span>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <a href="index.html" class="btn-secondary">← Back to Storefront</a>
+        <button type="button" id="adminLogoutBtn" class="btn-primary hidden">Log Out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container admin-main">
+    <!-- Admin Account Setup / Login Gate (Zero Pre-Existing Accounts) -->
+    <section id="adminAuthSection" class="admin-auth-card">
+      <h1 id="authHeading">Admin Access</h1>
+      <p id="authSubtext">Create your administrator account to manage Wallbinet orders and live delivery locations.</p>
+
+      <form id="adminAuthForm" class="admin-form">
+        <label for="adminEmail">Admin Email</label>
+        <input type="email" id="adminEmail" placeholder="wallbinetcorp@gmail.com" required />
+
+        <label for="adminPassword">Password</label>
+        <input type="password" id="adminPassword" placeholder="Enter password (min. 6 characters)" minlength="6" required />
+
+        <button type="submit" class="btn-primary full-width" id="adminAuthSubmit">Create Admin Account &amp; Enter</button>
+        <p id="adminAuthError" class="error-text"></p>
+      </form>
+    </section>
+
+    <!-- Admin Dashboard -->
+    <section id="adminDashboardSection" class="hidden">
+      <div class="admin-stats-grid">
+        <div class="stat-card">
+          <span>Total Orders</span>
+          <strong id="statTotalOrders">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Total Revenue</span>
+          <strong id="statTotalRevenue">₱0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Active Deliveries</span>
+          <strong id="statActiveDeliveries">0</strong>
+        </div>
+      </div>
+
+      <div class="admin-panel-card">
+        <div class="panel-head">
+          <h2>Customer Orders &amp; Delivery Location Updates</h2>
+          <button type="button" id="resetAdminBtn" class="btn-danger-outline">Reset Admin Credentials</button>
+        </div>
+
+        <div class="table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer &amp; Contact</th>
+                <th>Items Ordered</th>
+                <th>Payment</th>
+                <th>Total</th>
+                <th>Delivery Status &amp; Current Location</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="adminOrdersBody">
+              <!-- Populated dynamically by admin.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
